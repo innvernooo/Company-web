@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "daisyui";
+
 
 :root {
   --background: #ffffff;
@@ -10,6 +12,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-spectral: var(--font-spectral-regular);
+  --color-brand-100: #b42929;
+  --color-brand-200: #036ab7;
+  --color-brand-300: #f8bf56;
+  --color-brand-400: #ec685b;
+  --color-brand-500: #f1a34e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +28,6 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
