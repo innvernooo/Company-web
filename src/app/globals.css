@@ -18,6 +18,7 @@
   --color-brand-300: #f8bf56;
   --color-brand-400: #ec685b;
   --color-brand-500: #f1a34e;
+  --color-brand-600: #b79003;
 }
 
 @media (prefers-color-scheme: dark) {

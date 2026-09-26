@@ -1,3 +1,10 @@
+import { Geist, Geist_Mono } from 'next/font/google';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
 export default function Sidebar() {
   return (
     <>
@@ -7,7 +14,7 @@ export default function Sidebar() {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="flex min-h-full flex-col items-start bg-brand-300 is-drawer-close:w-14 is-drawer-open:w-64">
+        <div className={`flex min-h-full flex-col items-start bg-brand-600 ${geistSans.className} is-drawer-close:w-14 is-drawer-open:w-64`}>
           {/* Sidebar content here */}
           <ul className="menu w-full grow">
             {/* List item */}

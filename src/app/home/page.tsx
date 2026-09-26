@@ -8,7 +8,12 @@ const geistSans = Geist({
 export default function Homepage() {
   return (
     <>
-      <h1 className={`p-4 text-black ${geistSans.className}`}>Hello world</h1>
+      <div className={`breadcrumbs text-sm text-black ${geistSans.className}`}>
+  <ul>
+    <li>Home</li>
+  </ul>
+</div>
+<h1 className='mt-3 flex justify-center text-4xl text-black font-bold'>Welcome to Our Company Website</h1>
     </>
   );
 }
