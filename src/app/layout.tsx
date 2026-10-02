@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -21,20 +22,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en">
+    <html lang="id" className='scroll-smooth'>
       <body>
-        <div className="drawer lg:drawer-open">
-          <input
-            id="my-drawer-4"
-            type="checkbox"
-            className="drawer-toggle inline"
-          />
-          <div className="drawer-content">
-            <Navbar />
-            <div className="p-4">{children}</div>
-          </div>
-          <Sidebar />
-        </div>
+        <div className={`min-h-screen text-black ${geistSans.className}`}>{children}</div>
+      <ToastContainer />
       </body>
     </html>
   );
