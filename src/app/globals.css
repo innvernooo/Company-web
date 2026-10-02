@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 @plugin "daisyui";
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,6 +18,7 @@
   --color-brand-400: #ec685b;
   --color-brand-500: #f1a34e;
   --color-brand-600: #b79003;
+  --color-brand-700: #FFF0BE;
 }
 
 @media (prefers-color-scheme: dark) {
