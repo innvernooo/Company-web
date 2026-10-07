@@ -10,6 +10,7 @@ export const blogSchema = z.object({
     .string()
     .min(20, 'Can not be less than 20 characters')
     .max(2000, 'Maximum input is 2000 characters'),
+  publishedDate: z.string(),
 });
 
 export type blogRequest = z.infer<typeof blogSchema>;

@@ -15,17 +15,8 @@ const merienda = Merienda({
 export default function AboutUs() {
   return (
     <>
-      <div className="breadcrumbs text-xs md:text-sm">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>About Us</li>
-        </ul>
-      </div>
       <div
-        id="tentang-kami"
-        className="p-10 mt-10 grid grid-cols-1 gap-20 h-fit"
+        className="p-10 grid grid-cols-1 lg:grid-cols-[30%_60%] gap-20 lg:gap-8 h-fit"
       >
         <div className="flex justify-center">
           <Image
@@ -37,13 +28,13 @@ export default function AboutUs() {
           />
         </div>
         <div>
-          <h1 className={`${kalam.className} text-brand-200 text-3xl`}>
+          <h1 className={`${kalam.className} text-brand-200 text-3xl lg:text-4xl`}>
             Sekilas tentang
           </h1>
-          <h1 className={`${merienda.className} text-brand-100 text-2xl md:text-3xl`}>
+          <h1 className={`${merienda.className} text-brand-100 text-2xl md:text-3xl lg:text-4xl`}>
             TK IT ARISYA AL-KARIM
           </h1>
-          <p className="mt-3 text-lg leading-relaxed">
+          <p className="mt-3 text-lg lg:text-2xl leading-relaxed">
             TK IT ARISYA AL-KARIM adalah lembaga pendidikan anak usia dini yang
             berlokasi di Cengkareng, Jakarta Barat, DKI Jakarta.
             <br />
@@ -56,7 +47,7 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-      <div className="px-10 py-5 mt-10 grid grid-cols-1 gap-20 h-fit">
+      <div className="px-10 py-5 mt-10 grid grid-cols-1 lg:grid-cols-[30%_60%] gap-20 lg:gap-8 h-fit">
         <div className="w-full flex justify-center">
           <Image
             src="/images/logo-yayasan.svg"
@@ -66,13 +57,13 @@ export default function AboutUs() {
           />
         </div>
         <div>
-          <h1 className={`${kalam.className} text-brand-200 text-3xl`}>
+          <h1 className={`${kalam.className} text-brand-200 text-3xl lg:text-4xl`}>
             Berdiri di bawah naungan
           </h1>
-          <h1 className={`${merienda.className} text-brand-100 text-2xl md:text-3xl`}>
+          <h1 className={`${merienda.className} text-brand-100 text-2xl md:text-3xl lg:text-4xl`}>
             YAYASAN TARBIYATUL ARISYA ALKARIIM
           </h1>
-          <p className="mt-3 text-lg leading-relaxed">
+          <p className="mt-3 text-lg lg:text-2xl leading-relaxed">
             TK IT ARISYA AL-KARIM merupakan lembaga pendidikan yang berada di
             bawah naungan Yayasan Tarbiyatul Arisya AlKariim*.
             <br />
@@ -86,20 +77,20 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="mt-20 mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl">
-        <h1 className={`${merienda.className} text-brand-200 text-lg md:text-2xl`}>
+        <h1 className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}>
           SCHOOL'S VISION
         </h1>
-        <p className="mt-4 text-md md:text-lg">
+        <p className="mt-4 text-md md:text-lg lg:text-xl">
           Mewujudkan generasi anak usia dini yang beriman, bertakwa, cerdas,
           kreatif, mandiri, dan berakhlak mulia sesuai tuntunan Al-Qur'an dan
           Sunnah.
         </p>
       </div>
       <div className="mt-10 mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl">
-        <h1 className={`${merienda.className} text-brand-200 text-lg md:text-2xl`}>
+        <h1 className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}>
           SCHOOL'S MISSIONS
         </h1>
-        <ol className="mt-4 text-md md:text-lg">
+        <ol className="mt-4 text-md md:text-lg lg:text-xl">
           <SchoolMissions />
         </ol>
       </div>

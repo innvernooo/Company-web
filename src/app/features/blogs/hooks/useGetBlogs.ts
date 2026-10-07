@@ -3,9 +3,12 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 interface BlogRequest {
+  publisedDate: any;
   name: string;
   title: string;
   blog: string;
+  objectId: string;
+  publishedDate: number;
 }
 export default function useGetBlogs() {
   const [blog, setBlogs] = useState<BlogRequest[]>([]);
