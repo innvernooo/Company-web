@@ -23,30 +23,19 @@ const merienda = Merienda({
 export default function SchoolCurriculum() {
   return (
     <>
-      <div className="breadcrumbs text-xs">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="about-us">About Us</a>
-          </li>
-          <li>Programs</li>
-        </ul>
-      </div>
       <h1
-        className={`mt-10 flex justify-center ${merienda.className} text-2xl md:text-3xl text-brand-100`}
+        className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
       >
         KURIKULUM UNGGULAN SEKOLAH
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl text-brand-200`}
+        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
       >
         Membentuk karakter, Mengembangkan potensi
       </p>
       <div
         id="curriculum"
-        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 gap-7"
+        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7"
       >
         <CuriculumCard
           text="Integrasi Kurikulum"
@@ -59,16 +48,16 @@ export default function SchoolCurriculum() {
         <CuriculumCard text="Kegiatan Motorik" icon={RiRunFill} />
       </div>
       <h1
-        className={`mt-20 flex justify-center ${merienda.className} text-2xl md:text-3xl text-brand-100`}
+        className={`mt-20 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
       >
         PROGRAM TK IT ARISYA
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl text-brand-200`}
+        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
       >
         Jenjang Pendidikan Usia 4 - 6 Tahun
       </p>
-      <div className="mt-10 mx-10 grid grid-cols-1 gap-20">
+      <div className="mt-10 mx-10 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-15">
         <ProgramCard
           imageUrl="/gallery-images/15.jpg"
           title="Kelompok Bermain (KB)"

@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 
 import { Kalam, Merienda } from 'next/font/google';
 import Image from 'next/image';
+import { useSignInStore } from '@/stores/useSignInStore';
 
 const kalam = Kalam({
   weight: '700',
@@ -20,6 +21,7 @@ const merienda = Merienda({
 
 export default function SignInPage() {
   const router = useRouter();
+  const { setSignIn } = useSignInStore();
 
   const {
     register,
@@ -34,7 +36,14 @@ export default function SignInPage() {
         'https://api.backendless.com/51BDC217-6F0F-4668-8A87-71B5CFFCD59A/EC698C6A-021C-4A86-8DAD-32A425C360DD/users/login',
         { login: email, password },
       );
-      console.log(res);
+      console.log(res.data);
+      setSignIn(
+        res.data.username,
+        res.data.email,
+        res.data['user-token'],
+        res.data.objectId,
+      );
+
       reset();
       toast.success('Selamat datang di website kami');
       router.push('/');

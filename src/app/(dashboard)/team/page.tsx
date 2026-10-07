@@ -18,33 +18,20 @@ const merienda = Merienda({
 export default function SchoolTeam() {
   return (
     <>
-      <div className="breadcrumbs text-xs md:text-sm">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="about-us">About Us</a>
-          </li>
-          <li>
-            <a href="curriculum">Programs</a>
-          </li>
-          <li>School Team</li>
-        </ul>
-      </div>
       <h1
         id="team"
-        className={`mt-10 flex justify-center ${merienda.className} text-2xl md:text-3xl text-brand-100`}
+        className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
       >
         MEET OUR SCHOOL TEAM
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl text-brand-200`}
+        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
       >
         Leaders & Teachers
       </p>
-      <div className="mt-10 flex w-full justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <h1 className={`mt-15 flex text-2xl md:text-4xl justify-center ${merienda.className}`}>The Leaders</h1>
+      <div className="mt-6 flex w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-30">
           <StaffCard
             imageSrc="/images/bunda-erna.jpg"
             icon={BsPersonCheck}
@@ -63,8 +50,9 @@ export default function SchoolTeam() {
           />
         </div>
       </div>
-      <div className="mt-20 flex w-full justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <h1 className={`mt-23 flex text-2xl md:text-4xl justify-center ${merienda.className}`}>The Teachers</h1>
+      <div className="mt-6 flex w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-30">
           <StaffCard
             imageSrc="/images/miss-anita.jpg"
             icon={IoPersonCircleSharp}
