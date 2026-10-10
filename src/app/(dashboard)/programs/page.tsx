@@ -1,7 +1,9 @@
 'use client';
-import { motion } from 'motion/react';
+import { LazyMotion, domAnimation } from 'motion/react';
+import * as m from 'motion/react-m';
 
 import CuriculumCard from '../../features/curriculum/components/curiculumCard';
+import ProgramCard from '../../features/curriculum/components/programCard';
 
 import { Merienda, Kalam } from 'next/font/google';
 
@@ -10,7 +12,6 @@ import { FaLanguage } from 'react-icons/fa6';
 import { GiPrayerBeads, GiClover } from 'react-icons/gi';
 import { FaQuran } from 'react-icons/fa';
 import { RiRunFill } from 'react-icons/ri';
-import ProgramCard from '../../features/curriculum/components/programCard';
 
 const kalam = Kalam({
   weight: '700',
@@ -22,9 +23,39 @@ const merienda = Merienda({
   subsets: ['latin'],
 });
 
+const curriculum = [
+  { text: 'Integrasi Kurikulum', icon: TbPointerCollaboration2 },
+  { text: 'Tahsin & Tahfizh', icon: FaQuran },
+  { text: 'Pembiasaan Ibadah', icon: GiPrayerBeads },
+  { text: 'Literasi & Bahasa', icon: FaLanguage },
+  { text: 'Sunnah Lifestyle', icon: GiClover },
+  { text: 'Kegiatan Motorik', icon: RiRunFill },
+];
+
+const programs = [
+  {
+    imageUrl: '/images/kb.jpg',
+    alt: 'Kelas KB',
+    title: 'Kelompok Bermain (KB)',
+    age: 'Usia 3 - 4 Tahun',
+  },
+  {
+    imageUrl: '/images/tk-a.jpg',
+    alt: 'Kelas TK A',
+    title: 'TK-A',
+    age: 'Usia 4 - 5 Tahun',
+  },
+  {
+    imageUrl: '/images/tk-b.jpg',
+    alt: 'Kelas TK B',
+    title: 'TK-B',
+    age: 'Usia 5 - 6 Tahun',
+  },
+];
+
 export default function SchoolCurriculum() {
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       <h1
         className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
       >
@@ -35,56 +66,24 @@ export default function SchoolCurriculum() {
       >
         Membentuk karakter, Mengembangkan potensi
       </p>
+
       <div
         id="curriculum"
         className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7 text-black"
       >
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
-          <CuriculumCard
-            text="Integrasi Kurikulum"
-            icon={TbPointerCollaboration2}
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          <CuriculumCard text="Tahsin & Tahfizh" icon={FaQuran} />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, ease: 'easeOut' }}
-        >
-          <CuriculumCard text="Pembiasaan Ibadah" icon={GiPrayerBeads} />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-        >
-          <CuriculumCard text="Literasi & Bahasa" icon={FaLanguage} />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, ease: 'easeOut' }}
-        >
-          <CuriculumCard text="Sunnah Lifestyle" icon={GiClover} />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6, ease: 'easeOut' }}
-        >
-          <CuriculumCard text="Kegiatan Motorik" icon={RiRunFill} />
-        </motion.div>
+        {curriculum.map((item, i) => (
+          <m.div
+            key={item.text}
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            // stagger memakai delay, bukan duration yang makin panjang
+            transition={{ duration: 0.4, delay: i * 0.08, ease: 'easeOut' }}
+          >
+            <CuriculumCard text={item.text} icon={item.icon} />
+          </m.div>
+        ))}
       </div>
+
       <h1
         className={`mt-20 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
       >
@@ -95,47 +94,25 @@ export default function SchoolCurriculum() {
       >
         Jenjang Pendidikan Usia 4 - 6 Tahun
       </p>
+
       <div className="mt-10 mx-10 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-15">
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-        >
-          <ProgramCard
-            imageUrl="/images/kb.jpg"
-            alt='Kelas KB'
-            title="Kelompok Bermain (KB)"
-            age="Usia 3 - 4 Tahun"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-        >
-          <ProgramCard
-            imageUrl="/images/tk-a.jpg"
-            alt='Kelas TK A'
-            title="TK-A"
-            age="Usia 4 - 5 Tahun"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-        >
-          <ProgramCard
-            imageUrl="/images/tk-b.jpg"
-            alt='Kelas TK B'
-            title="TK-B"
-            age="Usia 5 - 6 Tahun"
-          />
-        </motion.div>
+        {programs.map((p, i) => (
+          <m.div
+            key={p.title}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: i * 0.1, ease: 'easeOut' }}
+          >
+            <ProgramCard
+              imageUrl={p.imageUrl}
+              alt={p.alt}
+              title={p.title}
+              age={p.age}
+            />
+          </m.div>
+        ))}
       </div>
-    </>
+    </LazyMotion>
   );
 }
