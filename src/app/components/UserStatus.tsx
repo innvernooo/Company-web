@@ -17,7 +17,7 @@ export default function UserStatus() {
   };
 
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm lg:text-base">
+    <div className="flex justify-between items-center text-xs md:text-sm lg:text-base text-black">
       <div>
         {isLoggedIn ? (
           <>
@@ -25,7 +25,7 @@ export default function UserStatus() {
             <div className="avatar">
               <div className="w-8 rounded-full">
                 <img
-                  alt="Tailwind-CSS-Avatar-component"
+                  alt="Photo profile"
                   src="./PP.jpg"
                 />
               </div>

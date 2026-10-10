@@ -71,9 +71,6 @@ export default function CreateBlogs() {
       >
         Share Your Thoughts with the World
       </p>
-      <p className="text-xs md:text-lg lg:ml-87 mt-10 text-red-600">
-        Your blog will be immediately displayed on the Blogs Page
-      </p>
       <div className="flex justify-center items-center mt-3">
         <div className="h-fit w-200 bg-brand-700 rounded-2xl shadow-lg">
           {isLoggedIn ? (
@@ -90,7 +87,7 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="text"
-                  className="input bg-white w-full"
+                  className="input bg-white w-full text-black"
                   placeholder="Type here..."
                   {...register('name')}
                 />
@@ -102,10 +99,12 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="date"
-                  className="input bg-white w-full"
+                  className="input bg-white w-full text-black"
                   {...register('publishedDate')}
                 />
-                <p className="label text-red-600">{errors?.publishedDate?.message}</p>
+                <p className="label text-red-600">
+                  {errors?.publishedDate?.message}
+                </p>
               </fieldset>
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-brand-200 text-lg">
@@ -113,7 +112,7 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="text"
-                  className="input bg-white w-full"
+                  className="input bg-white w-full text-black"
                   placeholder="Type here..."
                   {...register('title')}
                 />
@@ -124,7 +123,7 @@ export default function CreateBlogs() {
                   Write Your Blog
                 </legend>
                 <textarea
-                  className="textarea h-50 w-full bg-white"
+                  className="textarea h-50 w-full bg-white text-black"
                   placeholder="Type here..."
                   {...register('blog')}
                 ></textarea>
@@ -134,10 +133,13 @@ export default function CreateBlogs() {
               </fieldset>
               <button
                 type="submit"
-                className="bg-brand-100 font-semibold text-white rounded-md p-2 hover:bg-brand-200"
+                className="bg-green-400 hover:bg-green-600 font-semibold text-white rounded-md p-2 cursor-pointer"
               >
                 Submit
               </button>
+              <p className="text-xs md:text-lg mt-10 text-red-600 italic">
+                Your blog will be immediately displayed on the Blogs Page
+              </p>
             </form>
           ) : (
             <div className="flex flex-col items-center gap-3 p-8 text-center">

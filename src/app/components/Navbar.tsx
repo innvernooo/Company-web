@@ -4,13 +4,9 @@ import { Merienda, Kalam } from 'next/font/google';
 import Image from 'next/image';
 import { useSignInStore } from '@/stores/useSignInStore';
 import { toast } from 'react-toastify';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { Gelasio } from 'next/font/google';
-import { GoHomeFill } from 'react-icons/go';
-import { MdPhoto, MdOutlinePlayLesson } from 'react-icons/md';
-import { RiTeamFill } from 'react-icons/ri';
 import { TiThMenu } from 'react-icons/ti';
 
 const gelasio = Gelasio({
