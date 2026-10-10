@@ -103,7 +103,8 @@ export default function SchoolCurriculum() {
           transition={{ duration: 0.7 }}
         >
           <ProgramCard
-            imageUrl="/gallery-images/15.jpg"
+            imageUrl="/images/kb.jpg"
+            alt='Kelas KB'
             title="Kelompok Bermain (KB)"
             age="Usia 3 - 4 Tahun"
           />
@@ -115,7 +116,8 @@ export default function SchoolCurriculum() {
           transition={{ duration: 0.7 }}
         >
           <ProgramCard
-            imageUrl="/gallery-images/19.jpg"
+            imageUrl="/images/tk-a.jpg"
+            alt='Kelas TK A'
             title="TK-A"
             age="Usia 4 - 5 Tahun"
           />
@@ -127,7 +129,8 @@ export default function SchoolCurriculum() {
           transition={{ duration: 0.7 }}
         >
           <ProgramCard
-            imageUrl="/gallery-images/8.jpg"
+            imageUrl="/images/tk-b.jpg"
+            alt='Kelas TK B'
             title="TK-B"
             age="Usia 5 - 6 Tahun"
           />
