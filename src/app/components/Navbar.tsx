@@ -40,8 +40,8 @@ export default function Navbar() {
       <div className="flex justify-between w-full">
         <div className="flex items-center gap-1">
           <Image
-            src="/TK-IT-logo-bulat.svg"
-            alt="TK IT Arisya Al-Karim"
+            src="/tk-it-logo-bulat.svg"
+            alt="Logo TK IT"
             width={20}
             height={20}
             className="md:w-10"

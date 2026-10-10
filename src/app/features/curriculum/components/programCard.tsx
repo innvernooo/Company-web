@@ -11,18 +11,20 @@ interface ProgramCardRequest {
   imageUrl: string;
   title: string;
   age: string;
+  alt: string;
 }
 export default function ProgramCard({
   imageUrl,
   title,
   age,
+  alt,
 }: ProgramCardRequest) {
   return (
     <>
       <div className="p-4 h-fit bg-[#D4F6FF] rounded-2xl">
         <Image
           src={imageUrl}
-          alt="Kelas KB"
+          alt={alt}
           width={400}
           height={100}
           className="rounded-2xl w-full"
