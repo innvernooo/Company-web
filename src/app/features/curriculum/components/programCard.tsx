@@ -30,7 +30,7 @@ export default function ProgramCard({
         <h1 className={`mt-3 ${merienda.className} text-brand-100 text-xl md:text-3xl`}>
           {title}
         </h1>
-        <h2 className="mt-1 text-lg md:text-2xl font-semibold">{age}</h2>
+        <h2 className="mt-1 text-lg md:text-2xl font-semibold text-black">{age}</h2>
         <div className="text-yellow-900 mt-5 flex justify-end text-lg md:text-2xl">
           <CiStar />
           <CiStar />

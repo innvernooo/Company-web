@@ -33,7 +33,7 @@ export default function Blogs() {
       </p>
       <div className="mt-10 flex justify-center items-center gap-2 text-xl lg:text-2xl text-black font-semibold">
         <MdOutlineSwipe />
-        <h2>Swipe to Discover</h2>
+        <h2 className='text-black'>Swipe to Discover</h2>
       </div>
       <div className="carousel w-full rounded-box">
         {blog?.map((item, index) => {
@@ -42,19 +42,19 @@ export default function Blogs() {
           return (
             <div key={item?.objectId ?? index} className="carousel-item">
               <div className="relative h-100 w-80 lg:w-101 mt-13 mx-10 text-lg p-3 bg-brand-700 border-3 rounded-2xl">
-                <p>
-                  Penulis: <b className="font-semibold">{item?.name}</b>
+                <p className='text-black'>
+                  Penulis: <b className="font-semibold text-black">{item?.name}</b>
                 </p>
-                <p>
+                <p className='text-black'>
                   Dipublikasikan pada:{' '}
-                  <b className="font-semibold">{item?.publishedDate}</b>
+                  <b className="font-semibold text-black">{item?.publishedDate}</b>
                 </p>
                 <h1
                   className={`mt-6 text-2xl ${kalam.className} text-brand-200`}
                 >
                   {item?.title}
                 </h1>
-                <p className="mt-2 line-clamp-4">{item?.blog}</p>
+                <p className="mt-2 line-clamp-4 text-black">{item?.blog}</p>
                 <button
                   className="btn absolute right-3 bottom-3 btn-soft btn-sm btn-success mt-8 rounded-lg"
                   popoverTarget={modalId}

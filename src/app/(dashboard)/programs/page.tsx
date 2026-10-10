@@ -1,5 +1,7 @@
+'use client';
+import { motion } from 'motion/react';
+
 import CuriculumCard from '../../features/curriculum/components/curiculumCard';
-import Image from 'next/image';
 
 import { Merienda, Kalam } from 'next/font/google';
 
@@ -35,17 +37,53 @@ export default function SchoolCurriculum() {
       </p>
       <div
         id="curriculum"
-        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7"
+        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7 text-black"
       >
-        <CuriculumCard
-          text="Integrasi Kurikulum"
-          icon={TbPointerCollaboration2}
-        />
-        <CuriculumCard text="Tahsin & Tahfizh" icon={FaQuran} />
-        <CuriculumCard text="Pembiasaan Ibadah" icon={GiPrayerBeads} />
-        <CuriculumCard text="Literasi & Bahasa" icon={FaLanguage} />
-        <CuriculumCard text="Sunnah Lifestyle" icon={GiClover} />
-        <CuriculumCard text="Kegiatan Motorik" icon={RiRunFill} />
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          <CuriculumCard
+            text="Integrasi Kurikulum"
+            icon={TbPointerCollaboration2}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <CuriculumCard text="Tahsin & Tahfizh" icon={FaQuran} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0, ease: 'easeOut' }}
+        >
+          <CuriculumCard text="Pembiasaan Ibadah" icon={GiPrayerBeads} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+        >
+          <CuriculumCard text="Literasi & Bahasa" icon={FaLanguage} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, ease: 'easeOut' }}
+        >
+          <CuriculumCard text="Sunnah Lifestyle" icon={GiClover} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.6, ease: 'easeOut' }}
+        >
+          <CuriculumCard text="Kegiatan Motorik" icon={RiRunFill} />
+        </motion.div>
       </div>
       <h1
         className={`mt-20 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
@@ -58,21 +96,42 @@ export default function SchoolCurriculum() {
         Jenjang Pendidikan Usia 4 - 6 Tahun
       </p>
       <div className="mt-10 mx-10 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-15">
-        <ProgramCard
-          imageUrl="/gallery-images/15.jpg"
-          title="Kelompok Bermain (KB)"
-          age="Usia 3 - 4 Tahun"
-        />
-        <ProgramCard
-          imageUrl="/gallery-images/19.jpg"
-          title="TK-A"
-          age="Usia 4 - 5 Tahun"
-        />
-        <ProgramCard
-          imageUrl="/gallery-images/8.jpg"
-          title="TK-B"
-          age="Usia 5 - 6 Tahun"
-        />
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
+          <ProgramCard
+            imageUrl="/gallery-images/15.jpg"
+            title="Kelompok Bermain (KB)"
+            age="Usia 3 - 4 Tahun"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
+          <ProgramCard
+            imageUrl="/gallery-images/19.jpg"
+            title="TK-A"
+            age="Usia 4 - 5 Tahun"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
+          <ProgramCard
+            imageUrl="/gallery-images/8.jpg"
+            title="TK-B"
+            age="Usia 5 - 6 Tahun"
+          />
+        </motion.div>
       </div>
     </>
   );
