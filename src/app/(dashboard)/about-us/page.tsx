@@ -110,7 +110,7 @@ export default function AboutUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
-        className="mt-20 mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
+        className="mt-20 -mx-2 md:mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
       >
         <h1
           className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}
@@ -128,7 +128,7 @@ export default function AboutUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
-        className="mt-10 mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
+        className="mt-10 -mx-2 md:mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
       >
         <h1
           className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}
