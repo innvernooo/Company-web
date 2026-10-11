@@ -40,11 +40,10 @@ const visionCards = [
 ];
 
 const menuButtons = [
-  { href: '#', label: 'Enroll Now', style: 'btn-success' }, // ganti href sesuai tujuan pendaftaran
+  { href: '#', label: 'Enroll Now', style: 'btn-success' },
   { href: '/about-us', label: 'About Us', style: 'btn-primary' },
-  { href: '/curriculum', label: 'Programs', style: 'btn-secondary' },
+  { href: '/programs', label: 'Programs', style: 'btn-secondary' },
   { href: '/team', label: 'Teachers', style: 'btn-warning' },
-  { href: '/contact-us', label: 'Contact Us', style: 'btn-info' },
 ];
 
 export default function Homepage() {
@@ -130,6 +129,14 @@ export default function Homepage() {
             {b.label}
           </Link>
         ))}
+        <Link
+          className="btn btn-info w-fit h-fit p-3 text-[8px] md:text-lg lg:text-2xl text-white transition duration-300 hover:scale-110 hover:-translate-y-1"
+          href="https://wa.link/j7cj8z"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contact Us
+        </Link>
       </div>
     </LazyMotion>
   );
