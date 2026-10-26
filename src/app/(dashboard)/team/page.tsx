@@ -4,20 +4,9 @@ import * as m from 'motion/react-m';
 
 import StaffCard from '../../features/team/components/staffCard';
 
-import { Merienda, Kalam } from 'next/font/google';
 
 import { BsPersonCheck } from 'react-icons/bs';
 import { IoPersonCircleSharp } from 'react-icons/io5';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 const leaders = [
   {
@@ -65,18 +54,18 @@ export default function SchoolTeam() {
     <LazyMotion features={domAnimation}>
       <h1
         id="team"
-        className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
+        className={`mt-5 flex justify-center font-display font-bold text-2xl md:text-3xl lg:text-4xl text-brand-200`}
       >
         MEET OUR SCHOOL TEAM
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
+        className={`flex justify-center mt-2 font-display font-medium text-xl md:text-2xl lg:text-3xl text-brand-400`}
       >
         Leaders & Teachers
       </p>
 
       <h1
-        className={`mt-15 flex text-2xl md:text-4xl justify-center ${merienda.className} text-black`}
+        className={`mt-15 flex text-2xl md:text-4xl justify-center font-display font-bold text-ink`}
       >
         The Leaders
       </h1>
@@ -103,7 +92,7 @@ export default function SchoolTeam() {
       </div>
 
       <h1
-        className={`mt-23 flex text-2xl md:text-4xl justify-center ${merienda.className} text-black`}
+        className={`mt-23 flex text-2xl md:text-4xl justify-center font-display font-bold text-ink`}
       >
         The Teachers
       </h1>

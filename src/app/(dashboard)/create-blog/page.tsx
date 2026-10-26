@@ -5,22 +5,11 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import Link from 'next/link';
 
-import { Kalam, Merienda } from 'next/font/google';
 import {
   blogRequest,
   blogSchema,
 } from '../../features/create-blog/validation/createBlogSchema';
 import { useSignInStore } from '@/stores/useSignInStore';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 export default function CreateBlogs() {
   const { username, token } = useSignInStore();
@@ -62,24 +51,24 @@ export default function CreateBlogs() {
     <>
       <h1
         id="team"
-        className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
+        className={`mt-5 flex justify-center font-display font-bold text-2xl md:text-3xl lg:text-4xl text-brand-200`}
       >
         CREATE YOUR OWN BLOG
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
+        className={`flex justify-center mt-2 font-display font-medium text-xl md:text-2xl lg:text-3xl text-brand-400`}
       >
         Share Your Thoughts with the World
       </p>
       <div className="flex justify-center items-center mt-3">
-        <div className="h-fit w-200 bg-brand-700 rounded-2xl shadow-lg">
+        <div className="h-fit w-200 bg-brand-200-soft border border-brand-200/15 rounded-2xl shadow-lg">
           {isLoggedIn ? (
             <form
               onSubmit={handleSubmit(handleCreateBlog)}
               className="flex flex-col gap-4 p-4"
             >
-              <p className="text-sm text-green-600">
-                Login sebagai <b>{username}</b>
+              <p className="text-sm text-ink-muted">
+                Login sebagai <b className="text-brand-200">{username}</b>
               </p>
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-brand-200 text-lg">
@@ -87,11 +76,11 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="text"
-                  className="input bg-white w-full text-black"
+                  className="input bg-white text-ink border-brand-200/20 w-full"
                   placeholder="Type here..."
                   {...register('name')}
                 />
-                <p className="label text-red-600">{errors?.name?.message}</p>
+                <p className="label text-brand-100">{errors?.name?.message}</p>
               </fieldset>
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-brand-200 text-lg">
@@ -99,10 +88,10 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="date"
-                  className="input bg-white w-full text-black"
+                  className="input bg-white text-ink border-brand-200/20 w-full"
                   {...register('publishedDate')}
                 />
-                <p className="label text-red-600">
+                <p className="label text-brand-100">
                   {errors?.publishedDate?.message}
                 </p>
               </fieldset>
@@ -112,32 +101,32 @@ export default function CreateBlogs() {
                 </legend>
                 <input
                   type="text"
-                  className="input bg-white w-full text-black"
+                  className="input bg-white text-ink border-brand-200/20 w-full"
                   placeholder="Type here..."
                   {...register('title')}
                 />
-                <p className="label text-red-600">{errors?.title?.message}</p>
+                <p className="label text-brand-100">{errors?.title?.message}</p>
               </fieldset>
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-brand-200 text-lg">
                   Write Your Blog
                 </legend>
                 <textarea
-                  className="textarea h-50 w-full bg-white text-black"
+                  className="textarea h-50 w-full bg-white text-ink border-brand-200/20"
                   placeholder="Type here..."
                   {...register('blog')}
                 ></textarea>
-                <div className="label text-red-600">
+                <div className="label text-brand-100">
                   {errors?.blog?.message}
                 </div>
               </fieldset>
               <button
                 type="submit"
-                className="bg-green-400 hover:bg-green-600 font-semibold text-white rounded-md p-2 cursor-pointer"
+                className="bg-brand-400 hover:bg-brand-100 font-semibold text-white rounded-full transition p-2 cursor-pointer"
               >
                 Submit
               </button>
-              <p className="text-xs md:text-lg mt-10 text-red-600 italic">
+              <p className="text-xs md:text-lg mt-10 text-ink-muted italic">
                 Your blog will be immediately displayed on the Blogs Page
               </p>
             </form>
@@ -146,18 +135,18 @@ export default function CreateBlogs() {
               <p className="text-lg font-semibold text-brand-200">
                 Kamu harus sign in dulu untuk menulis blog
               </p>
-              <p className="text-sm text-black">
+              <p className="text-sm text-ink-muted">
                 Silakan masuk ke akunmu, atau daftar dulu kalau belum punya
                 akun.
               </p>
               <div className="mt-2 flex gap-3">
                 <Link
                   href="/sign-in"
-                  className="btn btn-success text-white hover:bg-brand-200"
+                  className="btn border-none bg-brand-200 text-white hover:bg-brand-200-deep"
                 >
                   Sign In
                 </Link>
-                <Link href="/sign-up" className="btn btn-warning">
+                <Link href="/sign-up" className="btn border-none bg-brand-300 text-ink hover:bg-brand-500">
                   Sign Up
                 </Link>
               </div>

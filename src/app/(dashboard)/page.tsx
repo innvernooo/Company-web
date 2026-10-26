@@ -2,22 +2,11 @@
 import { LazyMotion, domAnimation } from 'motion/react';
 import * as m from 'motion/react-m';
 
-import { Merienda, Kalam } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { TbHandClick } from 'react-icons/tb';
 import TestimoniCard from '../features/home/components/testimoni';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 const testimonials = [
   {
@@ -40,10 +29,10 @@ const visionCards = [
 ];
 
 const menuButtons = [
-  { href: '#', label: 'Enroll Now', style: 'btn-success' },
-  { href: '/about-us', label: 'About Us', style: 'btn-primary' },
-  { href: '/programs', label: 'Programs', style: 'btn-secondary' },
-  { href: '/team', label: 'Teachers', style: 'btn-warning' },
+  { href: '#', label: 'Enroll Now', style: 'bg-brand-400 hover:bg-brand-100' },
+  { href: '/about-us', label: 'About Us', style: 'bg-brand-200 hover:bg-brand-200-deep' },
+  { href: '/programs', label: 'Programs', style: 'bg-brand-200 hover:bg-brand-200-deep' },
+  { href: '/team', label: 'Teachers', style: 'bg-brand-200 hover:bg-brand-200-deep' },
 ];
 
 export default function Homepage() {
@@ -68,9 +57,9 @@ export default function Homepage() {
         />
       </div>
 
-      <div className="p-3 -mx-5 bg-brand-100">
+      <div className="p-3 -mx-5 bg-brand-300-soft">
         <h2
-          className={`h-fit flex justify-center items-center ${merienda.className} text-[9px] md:text-[19px] lg:text-[35px] text-white font-semibold`}
+          className={`h-fit flex justify-center items-center font-display text-[9px] md:text-[19px] lg:text-[35px] text-brand-200 font-semibold`}
         >
           Rumah kedua bagi si kecil untuk belajar dan tumbuh dalam nilai-nilai
           Islami.
@@ -85,9 +74,9 @@ export default function Homepage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.4, delay: i * 0.1, ease: 'easeOut' }}
-            className="p-1 aura text-brand-100 bg-yellow-300"
+            className="p-1"
           >
-            <p className="h-fit w-fit p-3 bg-brand-700 text-[15px] md:text-lg text-black rounded-lg">
+            <p className="h-fit w-fit p-3 bg-brand-200-soft border border-brand-200/15 text-[15px] md:text-lg text-ink rounded-2xl shadow-sm">
               {text}
             </p>
           </m.div>
@@ -95,7 +84,7 @@ export default function Homepage() {
       </div>
 
       <h1
-        className={`mt-15 flex text-xl md:text-4xl justify-center ${kalam.className}`}
+        className={`mt-15 flex text-xl md:text-4xl justify-center font-display font-medium text-brand-200`}
       >
         What they say about us?
       </h1>
@@ -114,8 +103,8 @@ export default function Homepage() {
         ))}
       </div>
 
-      <div className="mt-20 flex justify-center items-center gap-2 text-xs md:text-lg lg:text-xl text-black font-semibold">
-        <TbHandClick />
+      <div className="mt-20 flex justify-center items-center gap-2 text-xs md:text-lg lg:text-xl text-ink-muted font-semibold">
+        <TbHandClick className="text-brand-400" />
         <h2>Click one to explore more about TK IT Arisya Al-Karim</h2>
       </div>
 
@@ -124,13 +113,13 @@ export default function Homepage() {
           <Link
             key={b.label}
             href={b.href}
-            className={`w-fit h-fit p-3 text-[8px] md:text-lg lg:text-2xl btn ${b.style} text-white transition duration-300 hover:scale-110 hover:-translate-y-1`}
+            className={`w-fit h-fit p-3 text-[8px] md:text-lg lg:text-2xl btn border-none ${b.style} text-white transition duration-300 hover:scale-110 hover:-translate-y-1`}
           >
             {b.label}
           </Link>
         ))}
         <Link
-          className="btn btn-info w-fit h-fit p-3 text-[8px] md:text-lg lg:text-2xl text-white transition duration-300 hover:scale-110 hover:-translate-y-1"
+          className="btn border-none bg-brand-400 hover:bg-brand-100 w-fit h-fit p-3 text-[8px] md:text-lg lg:text-2xl text-white transition duration-300 hover:scale-110 hover:-translate-y-1"
           href="https://wa.link/j7cj8z"
           target="_blank"
           rel="noopener noreferrer"

@@ -9,7 +9,7 @@ const mission = [
 
 export default function SchoolMissions() {
   const mapMission = mission.map((item, index) => (
-    <li className='text-black' key={item}>{`${index + 1}. ${item}`}</li>
+    <li className='text-ink' key={item}>{`${index + 1}. ${item}`}</li>
   ));
 
   return <ul>{mapMission}</ul>;

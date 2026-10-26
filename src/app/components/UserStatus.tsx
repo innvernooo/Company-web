@@ -17,7 +17,7 @@ export default function UserStatus() {
   };
 
   return (
-    <div className="flex justify-between items-center text-xs md:text-sm lg:text-base text-black">
+    <div className="flex justify-between items-center text-xs md:text-sm lg:text-base text-ink-muted">
       <div>
         {isLoggedIn ? (
           <>
@@ -43,14 +43,14 @@ export default function UserStatus() {
       {isLoggedIn ? (
         <button
           onClick={handleLogout}
-          className="bg-red-500 p-1.5 font-semibold text-white hover:underline rounded-sm"
+          className="bg-brand-400 glass hover:bg-brand-100 px-3 py-1.5 font-semibold text-white transition rounded-full"
         >
           Sign Out
         </button>
       ) : (
         <Link
           href="/sign-in"
-          className="bg-green-500 p-1.5 font-semibold text-white hover:underline rounded-sm"
+          className="bg-green-400 glass hover:bg-brand-200-deep px-3 py-1.5 font-semibold text-white transition rounded-full"
         >
           Sign In
         </Link>
