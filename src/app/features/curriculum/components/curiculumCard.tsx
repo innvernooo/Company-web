@@ -15,8 +15,8 @@ export default function CuriculumCard({
     <>
       <div className='grid grid-cols-1'>
         <Icon className='mb-5 text-3xl md:text-4xl lg:text-5xl flex w-full justify-center' />
-        <div className="aura aura-rainbow duration-3000 p-1 h-fit">
-          <h2 className="p-2 flex justify-center bg-white rounded-lg w-full text-black text-md md:text-xl lg:text-2xl font-semibold">
+        <div className="p-1 h-fit">
+          <h2 className="p-2 flex justify-center bg-white border-2 border-brand-300/60 rounded-2xl w-full text-ink text-md md:text-xl lg:text-2xl font-semibold">
             {text}
           </h2>
         </div>

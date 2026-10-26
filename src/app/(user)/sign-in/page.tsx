@@ -5,19 +5,8 @@ import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 
-import { Kalam, Merienda } from 'next/font/google';
 import Image from 'next/image';
 import { useSignInStore } from '@/stores/useSignInStore';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 export default function SignInPage() {
   const router = useRouter();
@@ -54,7 +43,7 @@ export default function SignInPage() {
 
   return (
     <>
-      <div className="min-h-screen w-full flex justify-center items-center bg-brand-700">
+      <div className="min-h-screen w-full flex justify-center items-center bg-brand-300-soft">
         <form onSubmit={handleSubmit(handleSignIn)}>
           <Image
             src="/tk-it-logo.svg"
@@ -64,40 +53,40 @@ export default function SignInPage() {
             className="w-full h-40 mb-4 flex justify-center"
           />
           <h1
-            className={`text-3xl ${merienda.className} mb-1 text-brand-100 flex justify-center`}
+            className={`text-3xl font-display font-bold mb-1 text-brand-200 flex justify-center`}
           >
             Sign In Form
           </h1>
-          <p className={`mb-3 flex justify-center text-xl ${kalam.className}`}>
+          <p className={`mb-3 flex justify-center text-xl font-display font-medium text-brand-400`}>
             Enter your details to continue
           </p>
-          <fieldset className="fieldset bg-[#8ACFF8] border-base-300 rounded-box w-xs border p-4 ">
-            <label className="label text-black font-semibold">Email</label>
+          <fieldset className="fieldset bg-white border-brand-200/15 shadow-lg rounded-box w-xs border p-4 ">
+            <label className="label text-ink font-semibold">Email</label>
             <input
               type="email"
-              className="input bg-white"
+              className="input bg-white text-ink border-brand-200/20"
               placeholder="Email"
               {...register('email')}
             />
 
-            <label className="label text-black font-semibold">Password</label>
+            <label className="label text-ink font-semibold">Password</label>
             <input
               type="password"
-              className="input bg-white"
+              className="input bg-white text-ink border-brand-200/20"
               placeholder="Password"
               {...register('password')}
             />
 
-            <p>
+            <p className="text-ink-muted">
               Don't have an account?{' '}
               <a
-                className="text-red-600 font-semibold underline"
+                className="text-brand-400 font-semibold underline"
                 href="/sign-up"
               >
                 Sign Up
               </a>
             </p>
-            <button className="btn btn-success mt-4">Sign In</button>
+            <button className="btn border-none bg-brand-200 text-white hover:bg-brand-200-deep mt-4">Sign In</button>
           </fieldset>
         </form>
       </div>

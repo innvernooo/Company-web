@@ -1,19 +1,8 @@
 'use client';
 import { motion } from 'motion/react';
 
-import { Merienda, Kalam } from 'next/font/google';
 import Image from 'next/image';
 import SchoolMissions from '@/app/features/about-us/components/schoolMissions';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 export default function AboutUs() {
   return (
@@ -39,16 +28,16 @@ export default function AboutUs() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h1
-            className={`${kalam.className} text-brand-200 text-3xl lg:text-4xl`}
+            className={`font-display font-medium text-brand-400 text-3xl lg:text-4xl`}
           >
             Sekilas tentang
           </h1>
           <h1
-            className={`${merienda.className} text-brand-100 text-2xl md:text-3xl lg:text-4xl`}
+            className={`font-display font-bold text-brand-200 text-2xl md:text-3xl lg:text-4xl`}
           >
             TK IT ARISYA AL-KARIM
           </h1>
-          <p className="mt-3 text-lg lg:text-2xl leading-relaxed text-black">
+          <p className="mt-3 text-lg lg:text-2xl leading-relaxed text-ink">
             TK IT ARISYA AL-KARIM adalah lembaga pendidikan anak usia dini yang
             berlokasi di Cengkareng, Jakarta Barat, DKI Jakarta.
             <br />
@@ -83,16 +72,16 @@ export default function AboutUs() {
           transition={{ duration: 0.7 }}
         >
           <h1
-            className={`${kalam.className} text-brand-200 text-3xl lg:text-4xl`}
+            className={`font-display font-medium text-brand-400 text-3xl lg:text-4xl`}
           >
             Berdiri di bawah naungan
           </h1>
           <h1
-            className={`${merienda.className} text-brand-100 text-2xl md:text-3xl lg:text-4xl`}
+            className={`font-display font-bold text-brand-200 text-2xl md:text-3xl lg:text-4xl`}
           >
             YAYASAN TARBIYATUL ARISYA ALKARIIM
           </h1>
-          <p className="mt-3 text-lg lg:text-2xl leading-relaxed text-black">
+          <p className="mt-3 text-lg lg:text-2xl leading-relaxed text-ink">
             TK IT ARISYA AL-KARIM merupakan lembaga pendidikan yang berada di
             bawah naungan Yayasan Tarbiyatul Arisya AlKariim*.
             <br />
@@ -100,7 +89,7 @@ export default function AboutUs() {
             ARISYA untuk terus berkembang sebagai lembaga pendidikan yang
             terpercaya dan berorientasi pada pembentukan karakter islami anak.
           </p>
-          <p className="mt-2 text-red-600">
+          <p className="mt-2 text-brand-100">
             *SK AHU-0011997.AH.01.04.Tahun 2023{' '}
           </p>
         </motion.div>
@@ -110,14 +99,14 @@ export default function AboutUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
-        className="mt-20 -mx-2 md:mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
+        className="mt-20 -mx-2 md:mx-10 h-fit p-7 bg-brand-300-soft border-2 border-brand-300/50 rounded-3xl"
       >
         <h1
-          className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}
+          className={`font-display font-bold text-brand-200 text-lg md:text-2xl lg:text-3xl`}
         >
           SCHOOL'S VISION
         </h1>
-        <p className="mt-4 text-md md:text-lg lg:text-xl text-black">
+        <p className="mt-4 text-md md:text-lg lg:text-xl text-ink">
           Mewujudkan generasi anak usia dini yang beriman, bertakwa, cerdas,
           kreatif, mandiri, dan berakhlak mulia sesuai tuntunan Al-Qur'an dan
           Sunnah.
@@ -128,10 +117,10 @@ export default function AboutUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
-        className="mt-10 -mx-2 md:mx-10 h-fit p-7 bg-brand-700 border-4 rounded-3xl"
+        className="mt-10 -mx-2 md:mx-10 h-fit p-7 bg-brand-200-soft border-2 border-brand-200/15 rounded-3xl"
       >
         <h1
-          className={`${merienda.className} text-brand-200 text-lg md:text-2xl lg:text-3xl`}
+          className={`font-display font-bold text-brand-200 text-lg md:text-2xl lg:text-3xl`}
         >
           SCHOOL'S MISSIONS
         </h1>

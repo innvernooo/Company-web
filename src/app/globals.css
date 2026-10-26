@@ -9,8 +9,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta-sans);
+  --font-display: var(--font-fredoka);
   --font-spectral: var(--font-spectral-regular);
   --color-brand-100: #b42929;
   --color-brand-200: #036ab7;
@@ -19,6 +19,14 @@
   --color-brand-500: #f1a34e;
   --color-brand-600: #b79003;
   --color-brand-700: #FFF0BE;
+
+  /* Soft tints & neutrals derived from the brand palette */
+  --color-brand-200-soft: #e8f2fa;
+  --color-brand-200-deep: #02568f;
+  --color-brand-300-soft: #fff6e3;
+  --color-surface: #fffbf4;
+  --color-ink: #2d3142;
+  --color-ink-muted: #5f6577;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +37,7 @@
 }
 
 body {
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-jakarta-sans), Arial, Helvetica, sans-serif;
 }

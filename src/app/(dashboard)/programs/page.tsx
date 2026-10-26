@@ -5,23 +5,12 @@ import * as m from 'motion/react-m';
 import CuriculumCard from '../../features/curriculum/components/curiculumCard';
 import ProgramCard from '../../features/curriculum/components/programCard';
 
-import { Merienda, Kalam } from 'next/font/google';
 
 import { TbPointerCollaboration2 } from 'react-icons/tb';
 import { FaLanguage } from 'react-icons/fa6';
 import { GiPrayerBeads, GiClover } from 'react-icons/gi';
 import { FaQuran } from 'react-icons/fa';
 import { RiRunFill } from 'react-icons/ri';
-
-const kalam = Kalam({
-  weight: '700',
-  subsets: ['latin'],
-});
-
-const merienda = Merienda({
-  weight: '800',
-  subsets: ['latin'],
-});
 
 const curriculum = [
   { text: 'Integrasi Kurikulum', icon: TbPointerCollaboration2 },
@@ -57,19 +46,19 @@ export default function SchoolCurriculum() {
   return (
     <LazyMotion features={domAnimation}>
       <h1
-        className={`mt-5 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
+        className={`mt-5 flex justify-center font-display font-bold text-2xl md:text-3xl lg:text-4xl text-brand-200`}
       >
         KURIKULUM UNGGULAN SEKOLAH
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
+        className={`flex justify-center mt-2 font-display font-medium text-xl md:text-2xl lg:text-3xl text-brand-400`}
       >
         Membentuk karakter, Mengembangkan potensi
       </p>
 
       <div
         id="curriculum"
-        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7 text-black"
+        className="scroll-mt-20 mt-8 mx-6 grid grid-cols-2 lg:grid-cols-3 gap-7 text-brand-400"
       >
         {curriculum.map((item, i) => (
           <m.div
@@ -85,12 +74,12 @@ export default function SchoolCurriculum() {
       </div>
 
       <h1
-        className={`mt-20 flex justify-center ${merienda.className} text-2xl md:text-3xl lg:text-4xl text-brand-100`}
+        className={`mt-20 flex justify-center font-display font-bold text-2xl md:text-3xl lg:text-4xl text-brand-200`}
       >
         PROGRAM TK IT ARISYA
       </h1>
       <p
-        className={`flex justify-center mt-2 ${kalam.className} text-xl md:text-2xl lg:text-3xl text-brand-200`}
+        className={`flex justify-center mt-2 font-display font-medium text-xl md:text-2xl lg:text-3xl text-brand-400`}
       >
         Jenjang Pendidikan Usia 4 - 6 Tahun
       </p>

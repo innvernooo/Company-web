@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Fredoka, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ToastContainer } from 'react-toastify';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const jakartaSans = Plus_Jakarta_Sans({
+  variable: '--font-jakarta-sans',
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const fredoka = Fredoka({
+  variable: '--font-fredoka',
   subsets: ['latin'],
 });
 
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="id" className='scroll-smooth'>
+    <html lang="id" className={`scroll-smooth ${jakartaSans.variable} ${fredoka.variable}`}>
       <body>
-        <div className={`min-h-screen text-black ${geistSans.className}`}>{children}</div>
+        <div className="min-h-screen text-ink font-sans">{children}</div>
       <ToastContainer />
       </body>
     </html>
